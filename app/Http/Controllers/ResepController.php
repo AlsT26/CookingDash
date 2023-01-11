@@ -53,7 +53,7 @@ class ResepController extends Controller
     {
         $data = Resep::find($id);
         $bokmark = Bookmark::where('id_resep','=',$id)->first();
-        $bokmark->delete();
+        // $bokmark->delete();
         $data->delete();
         
         return redirect('/resep/tampil');
